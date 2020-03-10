@@ -1,8 +1,8 @@
 <template>
     <div id="header">
-        <header class="header">
+        <header class="header container">
             <div class="logo">
-                <img src="https://agenciametodo.com/wp-content/uploads/2017/05/logometodoazul.png" alt="Logo">
+                <router-link to="/"><img src="@/assets/logo.png" alt="Logo"></router-link>
             </div>
             <div class="menu">
                 <nav>
@@ -24,19 +24,67 @@ export default {
 </script>
 
 <style scoped>
-header {
+
+#header {
     width: 100vw;
     height: 80px;
     background-color:#dadada;
-    position: absolute;
+}
 
+header {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
 
 }
 
+.logo img {
+    height:50px;
+    margin:15px;
+    filter: grayscale(100%);
+}
+
 .menu {
+    height: 80px;
+    margin-right:20px;
+    line-height: 80px;
+}
+
+.menu nav {
 
 }
+
+.menu nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu nav ul li {
+    display: inline;
+}
+
+.menu nav ul li a {
+    color: #666;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px;
+    border-radius: 5px;
+    transition: all 300ms;
+    margin-left:10px;
+}
+
+.menu nav ul li a:hover, .menu nav ul li a.router-link-exact-active {
+    background: #666;
+    color:#dadada;
+    text-decoration:none;
+    transition: all 200ms;
+}
+
 </style>
