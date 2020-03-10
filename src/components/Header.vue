@@ -81,8 +81,8 @@ header {
 }
 
 .menu nav ul li a:hover, .menu nav ul li a.router-link-exact-active {
-    background: #666;
-    color:#dadada;
+    background: #c1c1c1;
+    color:#666;
     text-decoration:none;
     transition: all 200ms;
 }
